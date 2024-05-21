@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import { Routes, Route } from 'react-router-dom';
+import YazarEkle from './component/yazar/YazarEkle';
+import YazarEkleButton from './component/yazar/YazarEkleButton';
+import NavBar from './component/NavBar';
+import KitapEkleButton from "./component/kitap/KitapEkleButton";
+import KitapEkle from "./component/kitap/KitapEkle";
+import UyeKayit from "./component/uyelikbilgileri/UyeKayit";
+import UyeListele from "./component/uyelikbilgileri/UyeListele";
+import AnaSayfaGenel from "./component/anasayfa/AnaSayfaGenel";
+import YazarListele from "./component/yazar/YazarListele";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+    return (
+        <>
+            <NavBar />
+            <Routes>
+                <Route path="/yazar" element={<YazarEkleButton />} />
+                <Route path="/yazarEkle" element={<YazarEkle />} />
+                <Route path="/yazarListele" element={<YazarListele />} />
+                <Route path="/kitap" element={<KitapEkleButton />} />
+                <Route path="/kitapEkle" element={<KitapEkle />} />
+                <Route path="/uyelikbilgileri" element={<UyeKayit />} />
+                <Route path="/uyeListele" element={<UyeListele />} />
+                <Route path="/anaSayfaGenel" element={<AnaSayfaGenel />} />
+            </Routes>
+        </>
+    );
+};
 
 export default App;

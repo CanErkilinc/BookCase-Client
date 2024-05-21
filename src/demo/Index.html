@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kütüphane Takip Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Kütüphane Takip Sistemi</h1>
+
+<div id="app">
+    <h2>Yazar ve Kitap Ekle</h2>
+    <form id="addForm">
+        <label for="author">Yazar:</label>
+        <input type="text" id="author" name="author">
+        <label for="book">Kitap İsmi:</label>
+        <input type="text" id="book" name="book">
+        <button type="submit">Ekle</button>
+    </form>
+
+    <h2>Kitapları Listele ve Sil</h2>
+    <ul id="bookList">
+        <!-- Kitap listesi burada görüntülenecek -->
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
